@@ -1,4 +1,4 @@
-class EllipsisPrinter():
+class EllipsisPrintr():
     def __init__(self, string, max=5):
         self.string = string
         self.max = max
