@@ -1,3 +1,9 @@
+class FormattingException(Exception):
+    message = "Provided string doesn't contain formatting placeholders for {c} and/or {m}"
+    def __init__(self):
+        super().__init__(self.message)
+
+
 class ItterPrintr():
     def __init__(self, string, maxValue, start, diff=1):
         self.string = string
@@ -8,7 +14,10 @@ class ItterPrintr():
         self.buildString()
 
     def buildString(self):
-        return self.string.format(c=self.value, m=self.maxValue)
+        try:
+            return self.string.format(c=self.value, m=self.maxValue)
+        except:
+            raise FormattingError()
 
     def reachedLimit(self):
         return self.maxValue <= self.value
