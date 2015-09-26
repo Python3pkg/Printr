@@ -7,7 +7,7 @@ except:
     pass
 
 setup(
-    name = 'Printr',
+    name = 'Python-Printr',
     packages = ['printr'],
     version = '0.0.1',
     description = 'Python module to allow a print line to be updated after printing',
