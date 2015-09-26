@@ -13,7 +13,7 @@ setup(
     description = 'Python module to allow a print line to be updated after printing',
     long_description = LONG_DESCRIPTION,
     author = 'Jake Howard',
-    author_email = 'me@theorangeone.net',
+    author_email = 'me@theorangeone.net ',
     url = 'https://github.com/RealOrangeOne/Printr',
     license='MIT',
     platforms=['any']
