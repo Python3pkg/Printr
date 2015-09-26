@@ -1,20 +1,24 @@
 from distutils.core import setup
-
+from json import loads as json_loads
 LONG_DESCRIPTION = None
 try:
     LONG_DESCRIPTION = open('README.md').read()
 except:
     pass
 
+DETAILS = None
+with open('details.json') as file:
+    DETAILS = json_loads(file)
+
 setup(
-    name = 'Python-Printr',
-    packages = ['printr'],
-    version = '0.0.1',
-    description = 'Python module to allow a print line to be updated after printing',
+    name = DETAILS.name,
+    packages = DETAILS.packages,
+    version = DETAILS.version,
+    description = DETAILS.description,
     long_description = LONG_DESCRIPTION,
-    author = 'Jake Howard',
-    author_email = 'me@theorangeone.net ',
-    url = 'https://github.com/RealOrangeOne/Printr',
-    license='MIT',
-    platforms=['any']
+    author = DETAILS.author,
+    author_email = DETAILS.author_email,
+    url = DETAILS.url,
+    license = DETAILS.license,
+    platforms = DETAILS.platform
 )
