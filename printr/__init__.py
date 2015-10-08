@@ -1,17 +1,13 @@
-# Import python modules
 import os
-from json import loads as json_loads
+from json import load as json_load
 
-# Import Printr Modules
-from .simplePrintr import SimplePrintr
-from .itterPrintr import ItterPrintr
-from .ellipsisPrintr import EllipsisPrintr
-
-# Initialise
 PRINTR_PATH = os.path.dirname(os.path.abspath(__file__))
 
-with open(PRINTR_PATH + '/details.json') as file:
-	PRINTR_DETAILS = json_loads(file)
+from .ItterPrintr import ItterPrintr
+from .EllipsisPrintr import EllipsisPrintr
+
+with open(PRINTR_PATH + '/../details.json') as file:
+	PRINTR_DETAILS = json_load(file)
 
 
 def get_version():

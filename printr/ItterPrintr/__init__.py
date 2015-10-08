@@ -1,4 +1,5 @@
-from exceptions import FormattingError
+from printr.exceptions import FormattingError
+from printr.utils import write
 
 
 class ItterPrintr():
@@ -20,8 +21,7 @@ class ItterPrintr():
         return self.maxValue <= self.value
 
     def update(self, inc=True):
-        ending = '\r' if not self.reachedLimit() else '\n'
-        print(self.buildString(), end=ending)
+        write(self.buildString(), commit=(not self.reachedLimit()))
         if inc:
             self.inc()
 
