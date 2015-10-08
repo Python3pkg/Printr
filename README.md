@@ -17,6 +17,8 @@ Alternatively, you can download directly from Pypi [here](https://pypi.python.or
 import printr
 
 printr.get_version()
->>> 0.0.1
+>>> 0.0.3
 ```
 The printr module contains various different printrs to assist you. You can find more information about these printrs on the wiki.
+
+The main reason I wrote this project was to simplify status output for my projects, and because I'd never written a PyPi package before.
